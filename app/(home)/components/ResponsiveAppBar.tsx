@@ -20,8 +20,8 @@ import { Modal } from 'antd';
 import {logOut} from '@/lib/api/actions'
 import OutputIcon from '@mui/icons-material/Output';
 
-const pages = ['/', '/discounts/list', '/geolocation'];
-const pagesToRussian:any = {"/": "Скидки на карте", "/discounts/list": "Скидки списком", "/geolocation": "Геолокация"};
+const pages = ['/', '/discounts/list'];
+const pagesToRussian:any = {"/": "Скидки на карте", "/discounts/list": "Скидки списком"};
 
 
 export default function ResponsiveAppBar() {
@@ -99,7 +99,7 @@ export default function ResponsiveAppBar() {
                 </MenuItem>
               ))}
               <MenuItem key={`out`} onClick={handleCloseNavMenu}>
-                  <Link href={`https://docs.google.com/presentation/d/1QnCfEEjatQz9KI4QQ73HVNNRYpLCPvoA/edit?usp=sharing&ouid=117443855612121402557&rtpof=true&sd=true`} target='blank'><Typography textAlign="center">Commercial offer</Typography></Link>
+                  <Link href={`https://docs.google.com/presentation/d/1BJyz1UMPR9nb7pK-km4FUBwGNmo2Ts5a1dQ4oJ-8RKc/edit?usp=sharing`} target='blank'><Typography textAlign="center">Коммерческое предложение</Typography></Link>
                 </MenuItem>
 
             </Menu>
@@ -135,12 +135,12 @@ export default function ResponsiveAppBar() {
                 {pagesToRussian[page]}
               </Button></Link>
             ))}
-            <Link href={`https://docs.google.com/presentation/d/1QnCfEEjatQz9KI4QQ73HVNNRYpLCPvoA/edit?usp=sharing&ouid=117443855612121402557&rtpof=true&sd=true`} key={`out`} target='blank'><Button
+            <Link href={`https://docs.google.com/presentation/d/1BJyz1UMPR9nb7pK-km4FUBwGNmo2Ts5a1dQ4oJ-8RKc/edit?usp=sharing`} key={`out`} target='blank'><Button
                 key={`out`}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                Commercial offer
+                Комммерческое предложение
                 <OutputIcon />
               </Button></Link>
           </Box>

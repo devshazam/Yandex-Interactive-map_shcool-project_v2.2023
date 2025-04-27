@@ -58,7 +58,7 @@ export default function HomeLayout({
       </Content>
       <Footer style={{ textAlign: 'center' }}>
       <div className='p-4'>
-        Разработано в <a href="https://kopi34.ru/">kopi34.ru</a> ©2024
+        Разработано в <a href="https://github.com/devShazam">devShazam</a> ©2024
         </div>
       </Footer>
       </div>
