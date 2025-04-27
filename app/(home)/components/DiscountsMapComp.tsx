@@ -7,12 +7,6 @@ import {fspiralFromSameCoordinatesToYaMap} from '@/lib/utils/helpFunctions'
 
 const DiscountsMapComp = ({ mainDataObject = {}}: any) => {
     // функция должно окрашивать метки в цвета в зависимости от длительности размещения, если старше 7 дней, то желтый или красный
-    let colorPoint;
-    if(+mainDataObject.item.sale <= 10){
-        colorPoint = 'yellow';
-    } else {
-        colorPoint = 'red';
-    }
 
 
     return (
@@ -21,8 +15,7 @@ const DiscountsMapComp = ({ mainDataObject = {}}: any) => {
                         geometry={[mainDataObject.item.latitude, mainDataObject.item.longitude]}
                         options={{
                             preset: 'islands#oliveStretchyIcon', // список темплейтов на сайте яндекса
-                            // iconColor: colorPoint, // цвет иконкиz
-                            iconColor: colorPoint, // цвет иконки
+                            iconColor: 'red', // цвет иконки
                             iconOffset: fspiralFromSameCoordinatesToYaMap(mainDataObject.coordinates, mainDataObject.index, mainDataObject.item), // !!!!!!!!!!!!!!
                         }}
                         properties={{
